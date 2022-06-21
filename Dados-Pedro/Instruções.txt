@@ -1,0 +1,38 @@
+Sobre o CSV:
+- Header: 'Code,Lote,Product Description,Due Date'
+Contém 10 tipos de produtos, porém eles se repetem com lotes e data de validade distintas
+
+Tipos de produto:
+Código Descrição
+0001	 Brown rice
+0002	 Milky
+0003	 Extra virgin olive oil
+0004	 Watermelon
+0005	 Barbecue sauce
+0006	 Lemon
+0007	 Chocolate
+0008	 Soda
+0009	 Tea
+0010	 Coffee
+
+Sobre o desafio:
+Desenvolver uma aplicação que leia o CSV disponibilizado que gere o seguinte relatório:
+- Uma lista com total de cada produto e no final o total geral (ordenado por code)
+  - Header CSV: Code,Product Description,Total
+  - Header TXT: Code,Lote,Product Description,Total
+
+O tempo de execução deverá ser printado no console
+
+Bônus:
+- Bônus 1 - Um relatório por tipo de produto (ordenado por lote) e no final o total de produtos
+  - Header CSV: Code,Lote,Product Description
+  - Header TXT: Code|Lote|Product Description
+
+- Bônus 2 - Relatório consolidado contendo todos os produtos (ordenados por code e lote)
+    - Header CSV: Code,Lote,Product Description,Due Date
+    - Header Txt: Code|Lote|Product Description|Due Date
+  - Obs: A data de validade deve ser retornada no formato (aaaa-MM-dd)
+
+Obs:
+- Os relatórios podem ser gerados em txt ou csv
+- Utilizar Maven ou gradle em caso de utilização de alguma lib

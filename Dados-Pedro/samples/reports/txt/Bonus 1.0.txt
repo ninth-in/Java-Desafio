@@ -1,0 +1,5 @@
+Code|Lote|Product Description
+0001|0001|Brown rice
+0001|0002|Brown rice
+0001|0003|Brown rice
+|Total|3

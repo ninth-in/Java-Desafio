@@ -1,0 +1,22 @@
+Code|Lote|Product Description
+0001|001|Brown rice
+0001|002|Brown rice
+0002|001|Milky
+0002|002|Milky
+0003|001|Extra virgin olive oil
+0003|002|Extra virgin olive oil
+0004|001|Watermelon
+0004|002|Watermelon
+0005|001|Barbecue sauce
+0005|002|Barbecue sauce
+0006|001|Watermelon
+0006|002|Watermelon
+0007|001|Chocolate
+0007|002|Chocolate
+0008|001|Soda
+0008|002|Soda
+0009|001|Tea
+0009|002|Tea
+0010|001|Coffee
+0010|002|Coffee
+|Total|20
