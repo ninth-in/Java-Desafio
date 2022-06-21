@@ -1,4 +1,4 @@
-package maven.pack;
+package com.example;
 
 /**
  * Hello world!
