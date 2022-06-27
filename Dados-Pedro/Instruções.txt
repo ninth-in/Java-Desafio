@@ -20,8 +20,7 @@ Desenvolver uma aplicação que leia o CSV disponibilizado que gere o seguinte r
   - Uma lista com total de cada produto e no final o total geral (ordenado por code)
   - Header CSV: Code,Product Description,Total
   - Header TXT: Code,Lote,Product Description,Total
-
-O tempo de execução deverá ser printado no console
+  -O tempo de execução deverá ser printado no console
 
 Bônus:
 - Bônus 1 - Um relatório por tipo de produto (ordenado por lote) e no final o total de produtos
