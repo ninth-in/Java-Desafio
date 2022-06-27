@@ -17,7 +17,7 @@ Código Descrição
 
 Sobre o desafio:
 Desenvolver uma aplicação que leia o CSV disponibilizado que gere o seguinte relatório:
-- Uma lista com total de cada produto e no final o total geral (ordenado por code)
+  - Uma lista com total de cada produto e no final o total geral (ordenado por code)
   - Header CSV: Code,Product Description,Total
   - Header TXT: Code,Lote,Product Description,Total
 
