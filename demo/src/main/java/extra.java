@@ -1,4 +1,3 @@
-package com.example;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -12,7 +11,7 @@ import java.text.NumberFormat;
 //import java.util.Arrays;
 import java.util.LinkedList;
 
-public class App 
+public class extra 
 {
     public static void main( String[] args ) throws IOException
     {
@@ -81,4 +80,3 @@ public class App
         csvWriter.close();
     }
 }
-
