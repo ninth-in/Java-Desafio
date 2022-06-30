@@ -114,11 +114,28 @@ public class App
     }
 
     //terceira parte
+    public static void sort() throws IOException{
+        long start = System.currentTimeMillis();
+        List<List<String>> llp = new ArrayList<List<String>>();
+        String line = "";
+        try{
+            BufferedReader br = new BufferedReader(new FileReader("Dados-Pedro/source/products_shuffled.csv"));
+            while(!= null){
+
+            }
+            br.close();
+            long end = System.currentTimeMillis();
+            NumberFormat formatter = new DecimalFormat("#0.00000");
+            System.out.print("Execution time is " + formatter.format((end - start) / 1000d) + " seconds");
+        }catch
+        
+    }
 
     //main
     public static void main( String[] args ) throws IOException{
         //cont();
-        lote();
+        //lote();
+        //sort
     }
     
 }
