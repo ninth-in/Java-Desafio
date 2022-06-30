@@ -8,14 +8,15 @@ import com.opencsv.CSVWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-//import java.util.ArrayList;
-//import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 public class App 
 {
-    public static void main( String[] args ) throws IOException
-    {
+    //primeira parte
+    public static void cont() throws IOException{
         long start = System.currentTimeMillis();
         CSVWriter csvWriter = new CSVWriter(new FileWriter("demo/example.csv"));
         List<String[]> rows = new LinkedList<String[]>();
@@ -54,7 +55,7 @@ public class App
                 else if(values[0].equals("0009")){
                     aux9 += 1;
                 }
-                else if(values[0].equals("00010")){
+                else if(values[0].equals("0010")){
                     aux10 += 1;
                 }
             }
@@ -72,6 +73,7 @@ public class App
             long end = System.currentTimeMillis();
             NumberFormat formatter = new DecimalFormat("#0.00000");
             System.out.print("Execution time is " + formatter.format((end - start) / 1000d) + " seconds");
+            br.close();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -79,6 +81,45 @@ public class App
             e.printStackTrace();
         }
         csvWriter.close();
+        
     }
+
+    //segunda parte
+    public static void lote() throws IOException{
+        long start = System.currentTimeMillis();
+        List<List<String>> llp = new ArrayList<List<String>>();
+        String line = "";
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("Dados-Pedro/source/products_shuffled.csv"));
+            while((line = br.readLine()) != null){
+
+                llp.add(Arrays.asList(line.split(",")));
+               
+            }
+            llp.sort(new Comparator<List<String>>() {
+                @Override
+                public int compare(List<String> o1, List<String> o2) {
+                    return o1.get(1).compareTo(o2.get(1));
+                }
+            });
+            System.out.println(llp);
+            long end = System.currentTimeMillis();
+            NumberFormat formatter = new DecimalFormat("#0.00000");
+            System.out.print("Execution time is " + formatter.format((end - start) / 1000d) + " seconds");
+            br.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //terceira parte
+
+    //main
+    public static void main( String[] args ) throws IOException{
+        //cont();
+        lote();
+    }
+    
 }
 
