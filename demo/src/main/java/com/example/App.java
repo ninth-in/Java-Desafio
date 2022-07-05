@@ -100,7 +100,7 @@ public class App
                 String arr[] = str[i].split(":");
                 map.put(arr[0], arr[1]);
                 
-            }
+            } }
             //llp.sort(new Comparator<List<String>>() {
             //    @Override
             //    public int compare(List<String> o1, List<String> o2) {
@@ -143,5 +143,5 @@ public class App
         //sort
     }
     
-}
+ }
 
