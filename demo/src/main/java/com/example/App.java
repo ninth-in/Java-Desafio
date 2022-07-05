@@ -11,6 +11,7 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class App 
@@ -87,22 +88,26 @@ public class App
     //segunda parte
     public static void lote() throws IOException{
         long start = System.currentTimeMillis();
-        List<List<String>> llp = new ArrayList<List<String>>();
+        HashMap<String,String> map = new HashMap<String, String>();
         String line = "";
         try {
             BufferedReader br = new BufferedReader(new FileReader("Dados-Pedro/source/products_shuffled.csv"));
             while((line = br.readLine()) != null){
 
-                llp.add(Arrays.asList(line.split(",")));
-               
+                String str[] = line.split(",");
+               //hash map 
+               for(int i=0;i<str.length;i++){
+                String arr[] = str[i].split(":");
+                map.put(arr[0], arr[1]);
+                
             }
-            llp.sort(new Comparator<List<String>>() {
-                @Override
-                public int compare(List<String> o1, List<String> o2) {
-                    return o1.get(1).compareTo(o2.get(1));
-                }
-            });
-            System.out.println(llp);
+            //llp.sort(new Comparator<List<String>>() {
+            //    @Override
+            //    public int compare(List<String> o1, List<String> o2) {
+            //        return o1.get(1).compareTo(o2.get(1));
+            //    }
+            //});
+            //System.out.println(llp);
             long end = System.currentTimeMillis();
             NumberFormat formatter = new DecimalFormat("#0.00000");
             System.out.print("Execution time is " + formatter.format((end - start) / 1000d) + " seconds");
@@ -114,22 +119,22 @@ public class App
     }
 
     //terceira parte
-    public static void sort() throws IOException{
-        long start = System.currentTimeMillis();
-        List<List<String>> llp = new ArrayList<List<String>>();
-        String line = "";
-        try{
-            BufferedReader br = new BufferedReader(new FileReader("Dados-Pedro/source/products_shuffled.csv"));
-            while(!= null){
+    // public static void sort() throws IOException{
+    //     long start = System.currentTimeMillis();
+    //     List<List<String>> llp = new ArrayList<List<String>>();
+    //     String line = "";
+    //     try{
+    //         BufferedReader br = new BufferedReader(new FileReader("Dados-Pedro/source/products_shuffled.csv"));
+    //         while(!= null){
 
-            }
-            br.close();
-            long end = System.currentTimeMillis();
-            NumberFormat formatter = new DecimalFormat("#0.00000");
-            System.out.print("Execution time is " + formatter.format((end - start) / 1000d) + " seconds");
-        }catch
+    //         }
+    //         br.close();
+    //         long end = System.currentTimeMillis();
+    //         NumberFormat formatter = new DecimalFormat("#0.00000");
+    //         System.out.print("Execution time is " + formatter.format((end - start) / 1000d) + " seconds");
+    //     }catch
         
-    }
+    // }
 
     //main
     public static void main( String[] args ) throws IOException{
